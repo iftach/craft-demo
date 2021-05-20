@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.idadon.craft'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.15'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.4.0'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.10.0'
+}
+
+test {
+    useTestNG()
+}
